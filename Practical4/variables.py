@@ -4,6 +4,6 @@ c = 5550000
 d = b-a
 e = c-b
 if d>e:
-    print("d is larger")
+    print("d is larger, that means population growth decelerating")
 else:
-    print("e is larger")
+    print("e is larger,that means population growth accelerating")
