@@ -9,7 +9,7 @@ Pseudocode
 '''
 
 age = int(input("age (in years)"))
-while age >= 100:
+while age >= 100 or age < 0:
     print("please input a valid age!")
     age = int(input("age (in years)"))
 weigh = int(input("weight (in kg)"))
