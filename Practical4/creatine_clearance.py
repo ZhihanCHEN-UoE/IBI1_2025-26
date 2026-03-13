@@ -1,6 +1,6 @@
 '''
 Pseudocode
-1. Ask user to enter age (repeat until age < 100)
+1. Ask user to enter age (repeat until age is 0-100)
 2. Ask user to enter weight (repeat until weight is 21-79 kg)
 3. Ask user to enter gender (0=male, 1=female) → set coefficient (male=0.85, female=1)
 4. Ask user to enter Cr value
