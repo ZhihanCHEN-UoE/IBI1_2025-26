@@ -1,3 +1,4 @@
+# This code calculates the population growth rate for the UK, China, Italy, Brazil, and the USA from 2020 to 2024 and plots the growth rates in a bar chart.
 import matplotlib.pyplot as plt
 UK = {"2020":66.7,"2024":69.2}
 China = {"2020":1426,"2024":1410}
@@ -9,6 +10,7 @@ def growth_rate(country):
     percentage_growth = ((country["2024"] - country["2020"]) / country["2020"]) * 100
     return percentage_growth
 
+# Calculate growth rates and sort countries by growth rate
 countries = ["UK", "China", "Italy", "Brazil", "USA"]
 country_dicts = [UK, China, Italy, Brazil, USA]
 country_growth = [(country, growth_rate(data)) for country, data in zip(countries, country_dicts)]
@@ -27,6 +29,7 @@ for country in countries:
     elif country == "USA":
         print(f"Population growth rate for {country}: {growth_rate(USA):.2f}%")
 
+# Plotting the growth rates
 plt.bar(countries, [growth_rate(UK), growth_rate(China), growth_rate(Italy), growth_rate(Brazil), growth_rate(USA)], color=['blue', 'red', 'green', 'orange', 'purple'])
 plt.xlabel('Countries')
 plt.ylabel('Population Growth Rate (%)')

@@ -1,3 +1,4 @@
+# This code creates a dictionary of gene expression levels, adds a new gene to the dictionary, visualizes the gene expression levels using a bar graph, allows the user to query the expression level of a specific gene, and calculates the average expression level of all genes.
 import matplotlib.pyplot as plt
 genes = {"TP53":12.4,"EGFR":15.1,"BRCA1":8.2,"PTEN":5.3,"ESR1":10.7}
 genes["MYC"] = 11.6
