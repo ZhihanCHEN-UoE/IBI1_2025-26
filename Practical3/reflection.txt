@@ -1,2 +1,1 @@
 This Git and GitHub practical was insightful—mastering commits, branching, and merging felt rewarding, though resolving revert messages and merge conflicts took trial. Pushing to GitHub and building a simple page was fun, and I now grasp version control basics well, eager to practice more complex repo workflows.
-
