@@ -2,7 +2,7 @@ import re
 import numpy as np
 
 possible_stop_codons = input("Enter stop codons separated by commas (e.g. TAA,TAG,TGA): ").strip().upper().split(',')
-input_file = open("stop_genes.fa", "r")
+input_file = open('/Users/Zhihan/Library/CloudStorage/OneDrive-InternationalCampus,ZhejiangUniversity/26-26_Study/IBI/IBI1_2025-26/Practical7/stop_genes.fa', "r")
 gene_name_pattern = r">(.*?)_"
 figure_data = {}
 
@@ -77,3 +77,36 @@ ax.set_title('Codon Usage Across Top 50 Genes')
 plt.colorbar(im, ax=ax, label='Frequency')
 plt.tight_layout()
 plt.show()
+
+# New pie chart for codon distribution
+# Aggregate all codon counts across all genes
+total_codons = {}
+for gene, codons in figure_data.items():
+    for codon, count in codons.items():
+        total_codons[codon] = total_codons.get(codon, 0) + count
+
+# Prepare data for pie chart
+codons_list = list(total_codons.keys())
+counts_list = list(total_codons.values())
+
+# Sort by count descending
+sorted_indices = np.argsort(counts_list)[::-1]
+codons_list = [codons_list[i] for i in sorted_indices]
+counts_list = [counts_list[i] for i in sorted_indices]
+
+# For readability, take top 15 codons and group the rest as 'Others'
+top_n = min(15, len(codons_list))
+top_codons = codons_list[:top_n]
+top_counts = counts_list[:top_n]
+other_count = sum(counts_list[top_n:])
+if other_count > 0:
+    top_codons.append('Others')
+    top_counts.append(other_count)
+
+# Create pie chart
+plt.figure(figsize=(10, 8))
+plt.pie(top_counts, labels=top_codons, autopct='%1.1f%%', startangle=140, pctdistance=0.85)
+plt.title('Distribution of In-Frame Codons Produced by Genes Containing Specified Stop Codons')
+plt.axis('equal')
+plt.show()
+
