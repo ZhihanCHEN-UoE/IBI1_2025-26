@@ -17,7 +17,7 @@ with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa", "r") as file, open("st
                         outfile.write(f">{gene_name};{codon}\n{sequence}\n")
                         found = True
                         break
-            header = line
+            header = line # Start a new header
             sequence = ''
         else:
             sequence += line

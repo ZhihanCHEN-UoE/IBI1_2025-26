@@ -24,30 +24,6 @@ def find_orf(seq, starter, stoppers):
 starter = 'ATG'
 stopper = possible_stop_codons
 
-gene_name = None
-flag = False
-for line in input_file:
-    line = line.strip()
-    if line.startswith(">"):
-        match = re.search(gene_name_pattern, line)
-        if match:
-            gene_name = match.group(1)
-            flag = True
-        else:
-            flag = False
-    else:
-        if not flag:
-            continue
-        max_orf = find_orf(line, starter, stopper)
-        if max_orf:
-            codon_dic = {}
-            for i in range(0, len(max_orf)-2, 3):
-                codon = max_orf[i:i+3]
-                if codon in codon_dic:
-                    codon_dic[codon] += 1
-                else:
-                    codon_dic[codon] = 1
-            figure_data[gene_name] = codon_dic
 
 input_file.close()
 
@@ -94,18 +70,9 @@ sorted_indices = np.argsort(counts_list)[::-1]
 codons_list = [codons_list[i] for i in sorted_indices]
 counts_list = [counts_list[i] for i in sorted_indices]
 
-# For readability, take top 15 codons and group the rest as 'Others'
-top_n = min(15, len(codons_list))
-top_codons = codons_list[:top_n]
-top_counts = counts_list[:top_n]
-other_count = sum(counts_list[top_n:])
-if other_count > 0:
-    top_codons.append('Others')
-    top_counts.append(other_count)
-
 # Create pie chart
 plt.figure(figsize=(10, 8))
-plt.pie(top_counts, labels=top_codons, autopct='%1.1f%%', startangle=140, pctdistance=0.85)
+plt.pie(counts_list, labels=codons_list, autopct='%1.1f%%', startangle=140, pctdistance=0.85)
 plt.title('Distribution of In-Frame Codons Produced by Genes Containing Specified Stop Codons')
 plt.axis('equal')
 plt.show()
