@@ -49,10 +49,12 @@ results = SIR(population, beta, gamma, 100)
 
 # plot the results
 for i in range(0, 100, 10):
-    plt.figure(figsize=(6, 4), dpi=150)
-    plt.imshow(results[i], cmap='viridis', interpolation='nearest', origin='lower')
-    plt.title(f'Population at Time Step {i}'+' with Infected Individual at ('+str(x)+','+str(y)+')')
-    plt.colorbar(label='Infection Status')
+    fig, ax = plt.subplots(figsize=(6, 4), dpi=150)
+    ax.imshow(results[i], cmap='viridis', interpolation='nearest', origin='lower')
+    ax.set_title(f'Population at Time Step {i}'+' with Infected Individual at ('+str(x)+','+str(y)+')')
+    cbar = plt.colorbar(ax.images[0], ax=ax, label='Infection Status')
+    cbar.set_ticks([0, 1, 2])
+    cbar.set_ticklabels(['Susceptible', 'Infected', 'Recovered'])
     plt.savefig(f'population_step_{i}.png')
     plt.show()
     plt.close()
