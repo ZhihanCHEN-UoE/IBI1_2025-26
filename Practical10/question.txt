@@ -1,2 +1,4 @@
-Which country had the largest decrease in DALYs rate from 1990 to 2019?
-Country with largest decrease from 1990 to 2019: Ethiopia (-66292.94)
+Question: Which country had the largest decrease in DALYs rate from 1990 to 2019?
+
+Result: Ethiopia had the largest decrease, with a change of -66292.94 from 1990 to 2019.
+Discussion: This large negative change indicates a substantial reduction in disease burden over time compared with other countries in the dataset.
