@@ -36,6 +36,16 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
+# singapore_data = dalys_data.loc[dalys_data["Entity"] == min_country, ["Year", "DALYs"]]
+# plt.figure(figsize=(10, 5))
+# plt.plot(singapore_data["Year"], singapore_data["DALYs"], marker="o", color="tab:blue")
+# plt.xlabel("Year")
+# plt.ylabel("DALYs")
+# plt.title(f"DALYs Over Time in {min_country}")
+# plt.grid(True, alpha=0.3)
+# plt.tight_layout()
+# plt.show()
+
 # Question from question.txt:
 # "Which country had the largest decrease in DALYs rate from 1990 to 2019?"
 subset = dalys_data.loc[dalys_data["Year"].isin([1990, 2019]), ["Entity", "Year", "DALYs"]]
