@@ -32,7 +32,6 @@ plt.plot(lesotho_data["Year"], lesotho_data["DALYs"], marker="o", color="tab:blu
 plt.xlabel("Year")
 plt.ylabel("DALYs")
 plt.title(f"DALYs Over Time in {max_country}")
-plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
@@ -42,7 +41,6 @@ plt.show()
 # plt.xlabel("Year")
 # plt.ylabel("DALYs")
 # plt.title(f"DALYs Over Time in {min_country}")
-# plt.grid(True, alpha=0.3)
 # plt.tight_layout()
 # plt.show()
 
