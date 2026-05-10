@@ -18,6 +18,9 @@ while weigh <= 20 or weigh >= 80:
     weigh = int(input("weight (in kg)"))
 gender = int(input("gender, for male please input 0, for female please input 1"))
 gender = [1,0.85][gender]
-cr = input("Cr")
+cr = float(input("Cr"))
+while cr < 0 or cr > 100:
+    print("please input a valid Cr!")
+    cr = float(input("Cr"))
 rate = ((140-age)*weigh)/(72*cr)*gender
 print(rate)
