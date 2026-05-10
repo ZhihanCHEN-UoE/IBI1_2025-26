@@ -17,6 +17,8 @@ country_growth = [(country, growth_rate(data)) for country, data in zip(countrie
 country_growth.sort(key=lambda x: x[1], reverse=True)
 for country, rate in country_growth:
     print(country)
+print("Largest increase:", country_growth[0][0])
+print("Largest decrease:", country_growth[-1][0])
 for country in countries:
     if country == "UK":
         print(f"Population growth rate for {country}: {growth_rate(UK):.2f}%")
