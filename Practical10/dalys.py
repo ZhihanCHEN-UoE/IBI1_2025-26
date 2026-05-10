@@ -2,7 +2,19 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV file.
-dalys_data = pd.read_csv("/Users/Zhihan/Library/CloudStorage/OneDrive-InternationalCampus,ZhejiangUniversity/26-26_Study/IBI/IBI1_2025-26/Practical10/dalys-rate-from-all-causes.csv")
+# Dear marker,Here I use the local path in my mac, please change it to the correct path when you check the code.
+# You can try this code: 
+# from pathlib import Path
+# import pandas as pd
+# import matplotlib.pyplot as plt
+
+# # Load the CSV file from the same folder as this script.
+# script_dir = Path(__file__).parent
+# csv_path = script_dir / "dalys-rate-from-all-causes.csv"
+
+# dalys_data = pd.read_csv(csv_path)
+
+dalys_data = pd.read_csv('/Users/Zhihan/Library/CloudStorage/OneDrive-InternationalCampus,ZhejiangUniversity/26-26_Study/IBI/IBI1_2025-26/Practical10/dalys-rate-from-all-causes.csv')
 
 # Show 3rd and 4th columns (Year and DALYs) for the first 10 rows.
 first_10_year_dalys = dalys_data.iloc[:10, 2:4]
