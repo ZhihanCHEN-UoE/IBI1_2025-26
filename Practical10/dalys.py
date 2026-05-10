@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV file.
-dalys_data = pd.read_csv('/Users/Zhihan/Library/CloudStorage/OneDrive-InternationalCampus,ZhejiangUniversity/26-26_Study/IBI/IBI1_2025-26/Practical10/dalys-rate-from-all-causes.csv')
+dalys_data = pd.read_csv("/Users/Zhihan/Library/CloudStorage/OneDrive-InternationalCampus,ZhejiangUniversity/26-26_Study/IBI/IBI1_2025-26/Practical10/dalys-rate-from-all-causes.csv")
 
 # Show 3rd and 4th columns (Year and DALYs) for the first 10 rows.
 first_10_year_dalys = dalys_data.iloc[:10, 2:4]
