@@ -15,6 +15,7 @@ def find_orf(seq, starter, stopper):
 orfs = find_orf(seq, starter, stopper)
 largest_orf = max(orfs, key=len)
 print("Largest ORF:", largest_orf)
+print("Length:", len(largest_orf))
 
 # method 2 to find the largest ORF use regular expression
 import re
@@ -31,3 +32,4 @@ def find_largest_orf(seq, starter, stopper):
         return None
 largest_orf = find_largest_orf(seq, starter, stopper)
 print("Largest ORF:", largest_orf)
+print("Length:", len(largest_orf))
