@@ -35,7 +35,7 @@ def SIR(population, beta, gamma, n_steps):
                 for dy in [-1, 0, 1]:
                     if (dx != 0 or dy != 0) and (0 <= x + dx < population.shape[0]) and (0 <= y + dy < population.shape[1]):
                         if population[x + dx, y + dy] == 0: # if the neighbor is susceptible
-                            if random.randint(0,1) < beta: # infection occurs with probability beta
+                            if random.random() < beta: # infection occurs with probability beta
                                 population_copy[x + dx, y + dy] = 1 # neighbor becomes infected]
             # attempt to recover
             if random.randint(0,1) < gamma: # recovery occurs with probability gamma
