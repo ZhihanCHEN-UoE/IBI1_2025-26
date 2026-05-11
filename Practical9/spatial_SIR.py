@@ -1,3 +1,11 @@
+# Pseudocode:
+# 1. Find all currently infected cells.
+# 2. For each infected cell, check its 8 neighbours.
+# 3. If a neighbour is susceptible, infect it with probability beta.
+# 4. Recover the currently infected cell with probability gamma.
+# 5. Use a copy of the population so updates happen synchronously.
+# 6. Save or display plots at selected time points.
+
 # import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
