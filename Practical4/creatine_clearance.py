@@ -2,7 +2,7 @@
 Pseudocode
 1. Ask user to enter age (repeat until age is 0-100)
 2. Ask user to enter weight (repeat until weight is 21-79 kg)
-3. Ask user to enter gender (0=male, 1=female) → set coefficient (male=0.85, female=1)
+3. Ask user to enter gender (0=male, 1=female) → set coefficient (male=1, female=0.85)
 4. Ask user to enter Cr value
 5. Calculate rate = ((140 - age) × weight / (72 × Cr)) × coefficient
 6. Print the calculated rate
