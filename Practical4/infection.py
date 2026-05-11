@@ -1,9 +1,15 @@
-# a = first day illness student and b = growth rate
+# Pseudocode:
+# 1) Initialize starting infected count and daily growth rate.
+# 2) Track the current day and a list of daily totals.
+# 3) While total infected is below class size, grow by the rate each day.
+# 4) Record the day and infected count, then print summary and log.
+
+# a = infected students on day 1; b = daily growth rate
 a = 5
 b = 0.4
-c = a #c is current infected student
-cnt = 1
-information = [['day1', 5.0]]
+c = a # current infected students
+cnt = 1 # current day count
+information = [['day1', 5.0]] # list of [day_label, infected_count]
 while c < 91:
     c = c*(1+b)
     cnt += 1
