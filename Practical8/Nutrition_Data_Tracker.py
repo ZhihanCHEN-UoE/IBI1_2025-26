@@ -52,6 +52,12 @@ def track_daily_nutrition(consumed_items):
             print(warning)
     else:
         print("Nutrition intake is within healthy limits!")
+    return {
+        "calories": total_calories,
+        "protein": total_protein,
+        "carbs": total_carbs,
+        "fat": total_fat
+    }
 
 
 
