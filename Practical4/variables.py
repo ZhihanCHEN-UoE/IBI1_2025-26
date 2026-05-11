@@ -21,3 +21,14 @@ for X in [True, False]:
 
 print(results)
 # All True/False combinations for X and Y are tested above.
+
+X = True
+Y = False
+W = X or Y
+print(f"W = {W}") # W will be True because X is True, regardless of Y's value.
+# Truth table for W = X or Y:
+# X      Y      W
+# True   True   True
+# True   False  True
+# False  True   True
+# False  False  False
