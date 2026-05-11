@@ -1,0 +1,17 @@
+I responded to the formative feedback as follows:
+
+Week 3:
+- Feedback: Commit messages could be more informative.
+- Response: I checked the commit history and used clearer commit messages in later commits where possible.
+
+Week 4:
+- Feedback: variables.py needed a comment explaining whether d or e is bigger.
+- Response: I added a comment explaining that d is greater than e and that population growth is decelerating.
+- Feedback: Boolean work should be in variables.py and should test X or Y for different True/False combinations.
+- Response: I added the W = X or Y truth table to variables.py.
+- Feedback: infection.py pseudocode and variable comments could be clearer.
+- Response: I added clearer pseudocode and variable explanations.
+
+Week 5:
+- Feedback: gene_expression.py did not print the dictionary.
+- Response: I added print statements for the initial 5-gene dictionary and the updated dictionary after adding MYC.

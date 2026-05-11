@@ -9,3 +9,4 @@ elif d == e:
     print("they are equal")
 else:
     print("e is larger,that means population growth accelerating")
+# d is larger than e.
