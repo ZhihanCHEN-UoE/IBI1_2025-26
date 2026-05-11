@@ -38,7 +38,7 @@ def SIR(population, beta, gamma, n_steps):
                             if random.random() < beta: # infection occurs with probability beta
                                 population_copy[x + dx, y + dy] = 1 # neighbor becomes infected]
             # attempt to recover
-            if random.randint(0,1) < gamma: # recovery occurs with probability gamma
+            if random.random() < gamma: # recovery occurs with probability gamma
                 population_copy[x, y] = 2 # infected individual recovers
         population = population_copy
         infection_results.append(population)
